@@ -99,7 +99,7 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 pp = PdfPages('summary.pdf')
 
-if False:
+if True:
     fig=plt.figure()
     plt.xlabel("time")
     plt.ylabel('totale_attualmente_positivi')
@@ -113,7 +113,7 @@ if False:
  
     plt.show()
 
-if False:
+if True:
     fig=plt.figure()
     plt.xlabel("time")
     plt.ylabel('totale_attualmente_positivi/1M')

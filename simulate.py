@@ -149,11 +149,18 @@ for it in range(0,1000):
     ## total of infected places
     totP.append(np.sum(np.array([ 1 for m in w.m if m>0 ])))
 
+    # put containment measurements
     #if max(w.m) > 100 and w.realize==0:
     #    w.p_short*=.1
     #    w.p_long*=.1
     #    w.realize=it
     #    print "REALIZE"
+
+    ## relax containment measurements
+    if it==200:
+        w.p_short *= 100.
+        w.p_long *= 10.
+        print "RELAX"
 
     if w.totI <1: 
         print " ending at epoch",it,"no more I"
